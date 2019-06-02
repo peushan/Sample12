@@ -1,3 +1,4 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="westpac automation test kiwi saver">
     <test name="Tests: All the User Stories">
         <classes>
