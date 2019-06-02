@@ -61,7 +61,7 @@ public class KiwiSaverRetirementCalculator extends BasePage {
     private WebElement textEmployementStatusInfo;
 
     public KiwiSaverRetirementCalculator(WebDriver driver) {
-        Base.driver = driver;
+        this.driver = driver;
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
@@ -97,7 +97,10 @@ public class KiwiSaverRetirementCalculator extends BasePage {
             sendKeys(txtSavingsGoal, (String) Scenario.get("KiwiSavaerBalance"));
         }
         click(btnCalculate);
-        return txtValue.getText().replaceAll("[^a-zA-Z0-9 ]", "").equals(Scenario.get("ExpectedResult"));
+        boolean result = txtValue.getText().replaceAll("[^a-zA-Z0-9 ]", "").equals(Scenario.get("ExpectedResult"));
+        driver.switchTo().defaultContent();
+        driver.navigate().refresh();
+        return result;
     }
 
     /**

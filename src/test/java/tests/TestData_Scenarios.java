@@ -2,7 +2,7 @@ package tests;
 
 import org.json.JSONObject;
 
-public class TestDataScenarios {
+public class TestData_Scenarios {
 
     /**
      * This class providers the data need for each scenarios

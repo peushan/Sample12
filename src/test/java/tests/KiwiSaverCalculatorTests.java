@@ -7,7 +7,7 @@ import pageobjects.KiwiSaverPage;
 import pageobjects.KiwiSaverRetirementCalculator;
 import pageobjects.WestPacHomePage;
 
-public class WestpacTest extends BaseTest {
+public class KiwiSaverCalculatorTests extends BaseTest {
 
 
     @Test(description = "Test User Story 1 - Major", priority = 1)
@@ -17,7 +17,7 @@ public class WestpacTest extends BaseTest {
         KiwiSaverPage kiwiSaverPage = westPacHomePage.navigateKiwisaver();
         KiwiSaverRetirementCalculator kiwiSaverRetirementCalculator = kiwiSaverPage.navigatetoRetirementCal();
         sAssert.assertTrue(kiwiSaverRetirementCalculator.verifyAllIconsDisplayed(), "All the Info Icons are not displayed");
-        sAssert.assertTrue(kiwiSaverRetirementCalculator.verifyMessage(TestDataScenarios.US1_Scenario1()), "Expected Info Message is not displayed");
+        sAssert.assertTrue(kiwiSaverRetirementCalculator.verifyMessage(TestData_Scenarios.US1_Scenario1()), "Expected Info Message is not displayed");
         sAssert.assertAll();
     }
 
@@ -27,7 +27,7 @@ public class WestpacTest extends BaseTest {
         WestPacHomePage westPacHomePage = new WestPacHomePage(driver);
         KiwiSaverPage kiwiSaverPage = westPacHomePage.navigateKiwisaver();
         KiwiSaverRetirementCalculator kiwiSaverRetirementCalculator = kiwiSaverPage.navigatetoRetirementCal();
-        sAssert.assertTrue(kiwiSaverRetirementCalculator.calculateKiwiSaverBalance(TestDataScenarios.US2_Scenario1()));
+        sAssert.assertTrue(kiwiSaverRetirementCalculator.calculateKiwiSaverBalance(TestData_Scenarios.US2_Scenario1()));
         sAssert.assertAll();
     }
 
@@ -37,7 +37,7 @@ public class WestpacTest extends BaseTest {
         WestPacHomePage westPacHomePage = new WestPacHomePage(driver);
         KiwiSaverPage kiwiSaverPage = westPacHomePage.navigateKiwisaver();
         KiwiSaverRetirementCalculator kiwiSaverRetirementCalculator = kiwiSaverPage.navigatetoRetirementCal();
-        sAssert.assertTrue(kiwiSaverRetirementCalculator.calculateKiwiSaverBalance(TestDataScenarios.US2_Scenario2()));
+        sAssert.assertTrue(kiwiSaverRetirementCalculator.calculateKiwiSaverBalance(TestData_Scenarios.US2_Scenario2()));
         sAssert.assertAll();
     }
 
@@ -47,8 +47,7 @@ public class WestpacTest extends BaseTest {
         WestPacHomePage westPacHomePage = new WestPacHomePage(driver);
         KiwiSaverPage kiwiSaverPage = westPacHomePage.navigateKiwisaver();
         KiwiSaverRetirementCalculator kiwiSaverRetirementCalculator = kiwiSaverPage.navigatetoRetirementCal();
-        sAssert.assertTrue(kiwiSaverRetirementCalculator.calculateKiwiSaverBalance(TestDataScenarios.US2_Scenario3()));
+        sAssert.assertTrue(kiwiSaverRetirementCalculator.calculateKiwiSaverBalance(TestData_Scenarios.US2_Scenario3()));
         sAssert.assertAll();
     }
-
 }

@@ -14,7 +14,7 @@ public class KiwiSaverPage extends BasePage {
     private WebElement btngetStart;
 
     public KiwiSaverPage(WebDriver driver) {
-        Base.driver = driver;
+        this.driver = driver;
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 

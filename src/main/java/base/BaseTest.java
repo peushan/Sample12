@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class BaseTest extends Base {
+public class BaseTest extends Base{
 
     public SoftAssert sAssert;
     private Logger logger = Logger.getLogger(BaseTest.class);

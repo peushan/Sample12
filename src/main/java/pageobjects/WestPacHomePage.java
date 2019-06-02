@@ -20,7 +20,7 @@ public class WestPacHomePage extends BasePage {
     private WebElement btnKiwiSaverCal;
 
     public WestPacHomePage(WebDriver driver) {
-        Base.driver = driver;
+        this.driver = driver;
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
     }
 
