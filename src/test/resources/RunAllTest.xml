@@ -7,7 +7,6 @@
                     <include name="useCase1_Scenario1"></include>
                     <include name="useCase2_Scenario1"></include>
                     <include name="useCase2_Scenario2"></include>
-                    <include name="useCase2_Scenario3"></include>
                 </methods>
             </class>
         </classes>
