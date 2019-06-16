@@ -5,9 +5,7 @@
             <class name="tests.KiwiSaverCalculatorTests">
                 <methods>
                     <include name="useCase1_Scenario1"></include>
-                    <include name="useCase2_Scenario1"></include>
-                    <include name="useCase2_Scenario2"></include>
-                    <include name="useCase2_Scenario3"></include>
+                    <exclude name="useCase2_Scenario1"></exclude>
                 </methods>
             </class>
         </classes>
